@@ -92,21 +92,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioGroup
+            android:id="@+id/rodzaj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/spacer"
+                android:id="@+id/spacer_radiobatton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="spacer"/>
             <RadioButton
-                android:id="@+id/bieg"
+                android:id="@+id/bieg_radiobatton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="bieg"/>
             <RadioButton
-                android:id="@+id/swim"
+                android:id="@+id/swim_radiobatton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="płyłanie"/>
@@ -127,12 +128,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
-        android:progress="50"
-        android:progressTint="#E91E63"
+        android:progress="0"
         android:progressBackgroundTint="#0DC939"
-        android:thumbTint="#123abc"/>
+        android:progressTint="#E91E63"
+        android:thumbTint="#123abc"
+        />
 </LinearLayout>
 
-
-
+<Button
+    android:id="@+id/submitButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="zapisz" />
 </LinearLayout>
