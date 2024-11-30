@@ -1,5 +1,6 @@
 package com.example.mishafitnesstracker
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val editKalorie = findViewById<EditText>(R.id.editkalorie)
         val radioGroup = findViewById<RadioGroup>(R.id.rodzaj)
         val seekBar = findViewById<SeekBar>(R.id.seekbar)
-        val percentageText = findViewById<TextView>(R.id.percentageText) // TextView для процентов
+        val percentageText = findViewById<TextView>(R.id.percentageText)
 
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->

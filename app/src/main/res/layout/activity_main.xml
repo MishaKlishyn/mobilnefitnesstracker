@@ -113,28 +113,48 @@
                 android:text="płyłanie"/>
         </RadioGroup>
     </LinearLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    <TextView
+        android:id="@+id/intensityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="intensywność"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"
-        android:layout_margin="10dp"/>
+        android:background="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
 
-    <SeekBar
-        android:id="@+id/seekbar"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="0"
-        android:progressBackgroundTint="#0DC939"
-        android:progressTint="#E91E63"
-        android:thumbTint="#123abc"
-        />
-</LinearLayout>
+        android:orientation="vertical">
 
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressBackgroundTint="#0DC939"
+            android:progressTint="#E91E63"
+            android:thumbTint="#123abc"/>
+
+
+        <TextView
+            android:id="@+id/percentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 <Button
     android:id="@+id/submitButton"
     android:layout_width="wrap_content"
