@@ -1,41 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@android:color/holo_blue_light"
-    tools:context=".MainActivity"
-    android:paddingBottom="1dp">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/holo_blue_light"
+        tools:context=".MainActivity"
+        android:paddingBottom="1dp">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="czas:"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:padding="1dp"/>
-
-    <EditText
-        android:id="@+id/editTime"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:hint="time"
-        android:inputType="text"
-        android:textSize="15sp">
-
-    </EditText>
-
-
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,16 +19,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dystans:"
+            android:text="czas:"
             android:textSize="15sp"
             android:textStyle="bold"
-            />
+            android:padding="1dp"/>
 
         <EditText
-            android:id="@+id/editdystans"
+            android:id="@+id/editTime"
             android:layout_width="70dp"
             android:layout_height="48dp"
-            android:hint="dystans"
+            android:hint="time"
             android:inputType="text"
             android:textSize="15sp">
 
@@ -62,102 +36,145 @@
 
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="kalorie:"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:orientation="horizontal"
+            >
 
-        <EditText
-            android:id="@+id/editkalorie"
-            android:layout_width="70dp"
-            android:layout_height="48dp"
-            android:hint="dystans"
-            android:inputType="text"
-            android:textSize="15sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dystans:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
 
-        </EditText>
+            <EditText
+                android:id="@+id/editdystans"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:hint="dystans"
+                android:inputType="text"
+                android:textSize="15sp">
+
+            </EditText>
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioGroup
-            android:id="@+id/rodzaj"
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kalorie:"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editkalorie"
+                android:layout_width="70dp"
+                android:layout_height="48dp"
+                android:hint="kalorie"
+                android:inputType="text"
+                android:textSize="15sp">
+
+            </EditText>
+
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <RadioButton
-                android:id="@+id/spacer_radiobatton"
+            <RadioGroup
+                android:id="@+id/rodzaj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="spacer"/>
-            <RadioButton
-                android:id="@+id/bieg_radiobatton"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/spacer_radiobatton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="spacer"/>
+                <RadioButton
+                    android:id="@+id/bieg_radiobatton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bieg"/>
+                <RadioButton
+                    android:id="@+id/swim_radiobatton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="płyłanie"/>
+            </RadioGroup>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/intensityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="intensywność"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:progressBackgroundTint="#0DC939"
+                android:progressTint="#E91E63"
+                android:thumbTint="#123abc"/>
+
+
+            <TextView
+                android:id="@+id/percentageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="bieg"/>
-            <RadioButton
-                android:id="@+id/swim_radiobatton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="płyłanie"/>
-        </RadioGroup>
-    </LinearLayout>
-    <TextView
-        android:id="@+id/intensityLabel"
+                android:text="0%"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    <Button
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="intensywność"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="10dp" />
-
+        android:text="zapisz" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/black"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/showButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pokaż" />
 
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <SeekBar
-            android:id="@+id/seekbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0"
-            android:progressBackgroundTint="#0DC939"
-            android:progressTint="#E91E63"
-            android:thumbTint="#123abc"/>
-
-
-        <TextView
-            android:id="@+id/percentageText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0%"
-            android:textSize="16sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"/>
+         />
     </LinearLayout>
-<Button
-    android:id="@+id/submitButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="zapisz" />
-</LinearLayout>
