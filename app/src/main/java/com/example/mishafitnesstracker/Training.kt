@@ -1,6 +1,5 @@
 package com.example.mishafitnesstracker
 
-// Data class
 data class Training(
     val time: String,
     val distance: String,

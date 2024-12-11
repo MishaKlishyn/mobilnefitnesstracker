@@ -166,11 +166,7 @@
         android:background="@android:color/black"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"/>
-    <Button
-        android:id="@+id/showButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pokaż" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -178,6 +174,6 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_margin="1dp"
-
+        android:scrollbars="vertical"
          />
     </LinearLayout>

@@ -30,11 +30,11 @@ class TrainingAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val training = trainingList[position]
-        holder.timeTextView.text = "Time: ${training.time}"
-        holder.distanceTextView.text = "Distance: ${training.distance}"
-        holder.caloriesTextView.text = "Calories: ${training.calories}"
+        holder.timeTextView.text = "Time: ${training.time} min"
+        holder.distanceTextView.text = "Distance: ${training.distance} km"
+        holder.caloriesTextView.text = "Calories: ${training.calories} kcal"
         holder.activityTextView.text = "Activity: ${training.activityType}"
-        holder.intensityTextView.text = "Intensity: ${training.intensity}"
+        holder.intensityTextView.text = "Intensity: ${training.intensity} %"
 
 
         holder.itemView.setOnClickListener {
